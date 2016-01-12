@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Seward Letter Upload Feature feature.
+ */
+
+include_once 'seward_letter_upload_feature.features.inc';

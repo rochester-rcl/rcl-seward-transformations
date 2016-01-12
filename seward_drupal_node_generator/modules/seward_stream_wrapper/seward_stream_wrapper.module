@@ -1,0 +1,27 @@
+<?php
+/**
+ *Setting up a stream wrapper for seward letters (xml) files
+ *
+ **/
+define('DRUPAL_ROOT_DIRECTORY', '/usr/local/apache2/htdocs/');
+require_once DRUPAL_ROOT_DIRECTORY . '/modules/system/system.api.php';
+require_once DRUPAL_ROOT_DIRECTORY . '/includes/stream_wrappers.inc';
+
+
+ function seward_stream_wrapper_stream_wrappers() {
+   return array(
+     'letters' => array(
+       'name' => 'Seward Letters Directory',
+       'class' => 'LetterStreamWrapper',
+       'description' => 'Path to letter subdirectories and xml files',
+       'type' => STREAM_WRAPPERS_LOCAL_NORMAL,
+     ),
+   );
+ }
+
+ class LetterStreamWrapper extends DrupalPublicStreamWrapper {
+   public function getDirectoryPath() {
+     return DRUPAL_ROOT_DIRECTORY . '/sites/all/letters';
+   }
+
+ }

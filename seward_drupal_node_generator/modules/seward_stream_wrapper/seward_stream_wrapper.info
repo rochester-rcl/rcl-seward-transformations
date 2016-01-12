@@ -1,0 +1,4 @@
+name = Seward Stream Wrapper
+description = whatever
+package = Seward
+core = 7.x
