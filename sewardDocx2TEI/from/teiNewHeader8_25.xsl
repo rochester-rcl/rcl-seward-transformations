@@ -117,11 +117,10 @@
             </facsimile>
             <text>
                 <body>
-                    <div><xsl:comment> Begin Transcription </xsl:comment> 
+                    <xsl:comment> Begin Transcription </xsl:comment> 
                         <ab>
                             <xsl:apply-templates select="//text/body/div"/>
                         </ab>
-                    </div>
                 </body>
             </text>
         </TEI>
